@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { HomeRouter } from 'app/feature/Home/HomeRouter';
 import MainPage from 'app/Main';
 import { NavigationHeader } from 'app/shared/components/NavigationHeader';
 import { PedidoRouter } from 'app/feature/Pedido/PedidoRouter';

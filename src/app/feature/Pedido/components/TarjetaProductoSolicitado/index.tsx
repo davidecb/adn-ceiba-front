@@ -10,7 +10,6 @@ import {
   TarjetaProductoSolicitadoContainer,
   TiempoEjecucion
 } from './styles';
-import CeibaImg from '../../../../../assets/img/logo-ceiba.png';
 import { ProductoSolicitado } from '../../../Producto/models/ProductoSolicitado';
 
 

@@ -8,7 +8,6 @@ import {
   TiempoEjecucion
 } from './styles';
 import { BtnPersonalizarProducto } from '../BtnPersonalizarProducto';
-import CeibaImg from '../../../../../assets/img/logo-ceiba.png';
 import { Producto } from '../../models/Producto';
 
 
