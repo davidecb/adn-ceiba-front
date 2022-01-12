@@ -4,19 +4,15 @@ import { FormularioContainer, PedidoContainer } from './styles';
 import { Pedido } from '../../models/Pedido';
 import { TarjetaProductoSolicitado } from '../TarjetaProductoSolicitado';
 
-export interface ListaPedidoProps {
+export interface ListarPedidoProps {
   pedido: Pedido;
-  onClickFinalizarPedido: (pedido: Pedido) => void;
   eliminarProductoSolicitado: (idProductoSolicitado: number) => void;
 }
 
-export const ListaPedido: React.FC<ListaPedidoProps> = ({
+export const ListarPedido: React.FC<ListarPedidoProps> = ({
   pedido,
-  onClickFinalizarPedido,
   eliminarProductoSolicitado,
 }) => {
-
-  const [finalizarPedidoClicked, setFinalizarPedidoClicked] = React.useState(false);
   return (
     <PedidoContainer>
       {pedido.productosSolicitados && pedido.productosSolicitados.map((producto, index) => {
@@ -37,8 +33,7 @@ export const ListaPedido: React.FC<ListaPedidoProps> = ({
   );
 };
 
-ListaPedido.propTypes = {
+ListarPedido.propTypes = {
   pedido: PropTypes.any.isRequired,
-  onClickFinalizarPedido: PropTypes.func.isRequired,
   eliminarProductoSolicitado: PropTypes.func.isRequired,
 };

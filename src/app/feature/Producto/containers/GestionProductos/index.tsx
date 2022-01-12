@@ -1,7 +1,7 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { DivContainer, DivRow } from './styles';
-import { ListaProductos } from '../../components/ListarProductos';
+import { ListarProductos } from '../../components/ListarProductos';
 import { PaginadorProductos } from '../../components/PaginadorProductos';
 import { Pedido } from 'app/feature/Pedido/models/Pedido';
 import { Producto } from '../../models/Producto';
@@ -46,7 +46,7 @@ export const GestionProductos: React.FC<GestionProductosProps> = ({
   return (
     <DivContainer>
       <DivRow>
-        <ListaProductos
+        <ListarProductos
           productos={productos}
           onClickAgregarProductoSolicitado={async (productoSolicitado) => {
             const pedidoString = sessionStorage.getItem('pedido') || '{}';

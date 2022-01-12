@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { RenderResult, render } from '@testing-library/react';
 import { SinonStub, stub } from 'sinon';
-import { ListaPedido } from './../ListarPedido';
+import { ListarPedido } from './../ListarPedido';
 
 describe('ListarPedido Test', () => {
   let componentWrapper: RenderResult;
-  let componentProps: React.ComponentProps<typeof ListaPedido> & {
+  let componentProps: React.ComponentProps<typeof ListarPedido> & {
     onClickFinalizarPedido: SinonStub;
     eliminarProductoSolicitado: SinonStub;
   };
@@ -46,7 +46,7 @@ describe('ListarPedido Test', () => {
       onClickFinalizarPedido: stub(),
       eliminarProductoSolicitado: stub(),
     };
-    componentWrapper = render(<ListaPedido {...componentProps} />);
+    componentWrapper = render(<ListarPedido {...componentProps} />);
   });
 
   it('should match snapshot', () => {

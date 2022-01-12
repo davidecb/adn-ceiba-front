@@ -6,12 +6,12 @@ import { Producto } from '../../models/Producto';
 import { ProductoSolicitado } from '../../models/ProductoSolicitado';
 import { TarjetaProducto } from '../TarjetaProducto';
 
-export interface ListaProductosProps {
+export interface ListarProductosProps {
   productos: Array<Producto>;
   onClickAgregarProductoSolicitado: (productoSolicitado: ProductoSolicitado) => void;
 }
 
-export const ListaProductos: React.FC<ListaProductosProps> = ({
+export const ListarProductos: React.FC<ListarProductosProps> = ({
   productos,
   onClickAgregarProductoSolicitado,
 }) => {
@@ -54,7 +54,7 @@ export const ListaProductos: React.FC<ListaProductosProps> = ({
   );
 };
 
-ListaProductos.propTypes = {
+ListarProductos.propTypes = {
   productos: PropTypes.array.isRequired,
   onClickAgregarProductoSolicitado: PropTypes.func.isRequired,
 };

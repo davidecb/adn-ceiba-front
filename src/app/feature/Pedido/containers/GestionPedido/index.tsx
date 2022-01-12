@@ -2,7 +2,7 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { CaracteristicasPedido } from '../../components/CaracteristicasPedido';
 import { DivContainer } from './styles';
-import { ListaPedido } from '../../components/ListarPedido';
+import { ListarPedido } from '../../components/ListarPedido';
 import { Pedido } from '../../models/Pedido';
 import { useEffect } from 'react';
 
@@ -27,7 +27,7 @@ export const GestionPedido: React.FC<GestionPedidoProps> = ({
   return (
     <DivContainer>
          {(!pedido || pedido.costo === 0) && <h2>Aun no tienes productos en el carrito</h2>} 
-         {(pedido && pedido.costo !== 0) && <ListaPedido pedido={pedido} onClickFinalizarPedido={() => {}} eliminarProductoSolicitado={(idProductoSolicitado: number) => eliminarProductoSolicitado(idProductoSolicitado)} />}    
+         {(pedido && pedido.costo !== 0) && <ListarPedido pedido={pedido} eliminarProductoSolicitado={(idProductoSolicitado: number) => eliminarProductoSolicitado(idProductoSolicitado)} />}    
          {(pedido && pedido.costo !== 0) && <CaracteristicasPedido pedido={pedido} onClickFinalizarPedido={finalizarPedido} />}
     </DivContainer>
   );
