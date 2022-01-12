@@ -1,14 +1,8 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import * as Yup from 'yup';
-import {
-  Cancelar,
-  Form,
-  FormSolicitarProductoContainer,
-  Label,
-  OpcionesAcabado,
-  SpanError
-} from './styles';
+import { Cancelar, Form, FormSolicitarProductoContainer,
+        Label, OpcionesAcabado, SpanError } from './styles';
 import { Button } from 'app/shared/components/Button';
 import { FormikHelpers } from 'formik/dist/types';
 import { Producto } from 'app/feature/Producto/models/Producto';
@@ -81,8 +75,8 @@ export const FormSolicitarProducto: React.FC<FormSolicitarProductoProps> = ({
         barnizado: checkboxValues.barnizado
       },
       urgencia: checkboxValues.urgencia,
-      cantidad,
-      producto: producto.id
+      producto: producto.id,
+      cantidad
     });
     resetForm();
     cerrarFormulario();
@@ -94,9 +88,7 @@ export const FormSolicitarProducto: React.FC<FormSolicitarProductoProps> = ({
     onSubmit: handleSubmit,
   });
 
-  const handleCancelar = () => {
-    cerrarFormulario();
-  };
+  const handleCancelar = () => cerrarFormulario();
 
   const handleFormCheckbox =(e: React.ChangeEvent<HTMLInputElement>) => {    
     const { checked, value } = e.target;
@@ -112,24 +104,13 @@ export const FormSolicitarProducto: React.FC<FormSolicitarProductoProps> = ({
       <Cancelar onClick={handleCancelar}>❌</Cancelar>
       <Form onSubmit={formik.handleSubmit}>
         <h2>Personalizar {producto.nombre}</h2>
-        <Select
-          name="material"
-          placeholder="material"
-          value={formik.values.material}
-          onChange={formik.handleChange}>
+        <Select name="material" placeholder="material" value={formik.values.material} onChange={formik.handleChange}>
             <option value="" >Material</option>
             <option value="PLA" >PLA</option>
             <option value="ABS" >ABS</option>
         </Select>
-        {formik.touched.material && formik.errors.material && (
-          <SpanError>{formik.errors.material}</SpanError>
-        )}
-        <Select
-          name="color"
-          placeholder="color"
-          value={formik.values.color}
-          onChange={formik.handleChange}
-        >
+        {formik.touched.material && formik.errors.material && (<SpanError>{formik.errors.material}</SpanError>)}
+        <Select name="color" placeholder="color" value={formik.values.color} onChange={formik.handleChange}>
           <option value="" >Color</option>
           <option value="negro" >Negro</option>
           <option value="blanco" >Blanco</option>
@@ -137,27 +118,21 @@ export const FormSolicitarProducto: React.FC<FormSolicitarProductoProps> = ({
           <option value="madera" >Madera</option>
           <option value="plata" >Plata</option>
         </Select>
-        {formik.touched.color && formik.errors.color && (
-          <SpanError>{formik.errors.color}</SpanError>
-        )}
+        {formik.touched.color && formik.errors.color && (<SpanError>{formik.errors.color}</SpanError>)}
         <OpcionesAcabado>
           Acabados:
           <Label>
-            Pulido
-            <input type='checkbox' name='acabado' value='pulido' onChange={handleFormCheckbox} />
+            Pulido <input type='checkbox' name='acabado' value='pulido' onChange={handleFormCheckbox} />
           </Label>
           <Label>
-            Pintado
-            <input type='checkbox' name='acabado' value='pintado' onChange={handleFormCheckbox} />
+            Pintado <input type='checkbox' name='acabado' value='pintado' onChange={handleFormCheckbox} />
           </Label>
           <Label>
-            Barnizado
-            <input type='checkbox' name='acabado' value='barnizado' onChange={handleFormCheckbox} />
+            Barnizado <input type='checkbox' name='acabado' value='barnizado' onChange={handleFormCheckbox} />
           </Label>
         </OpcionesAcabado>
         <Label>
-          Urgencia: 
-          <input type='checkbox' name='acabado' value='urgencia' onChange={handleFormCheckbox} />
+          Urgencia: <input type='checkbox' name='acabado' value='urgencia' onChange={handleFormCheckbox} />
         </Label>
         <SelectorCantidad setCantidad={setCantidad} cantidad={initialValues.cantidad} />             
         <Button type="submit">Agregar al carrito</Button>

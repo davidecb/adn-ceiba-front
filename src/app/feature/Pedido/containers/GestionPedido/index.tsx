@@ -26,9 +26,19 @@ export const GestionPedido: React.FC<GestionPedidoProps> = ({
 
   return (
     <DivContainer>
-         {(!pedido || pedido.costo === 0) && <h2>Aun no tienes productos en el carrito</h2>} 
-         {(pedido && pedido.costo !== 0) && <ListarPedido pedido={pedido} eliminarProductoSolicitado={(idProductoSolicitado: number) => eliminarProductoSolicitado(idProductoSolicitado)} />}    
-         {(pedido && pedido.costo !== 0) && <CaracteristicasPedido pedido={pedido} onClickFinalizarPedido={finalizarPedido} />}
+          {(!pedido || pedido.costo === 0) && <h2>Aun no tienes productos en el carrito</h2>} 
+          {(pedido && pedido.costo !== 0) && 
+            <ListarPedido 
+              pedido={pedido} 
+              eliminarProductoSolicitado={
+                (idProductoSolicitado: number) => eliminarProductoSolicitado(idProductoSolicitado)
+              } 
+            />}    
+          {(pedido && pedido.costo !== 0) && 
+            <CaracteristicasPedido 
+              pedido={pedido} 
+              onClickFinalizarPedido={finalizarPedido} 
+            />}
     </DivContainer>
   );
 };

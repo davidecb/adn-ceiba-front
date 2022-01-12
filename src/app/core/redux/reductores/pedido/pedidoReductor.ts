@@ -41,7 +41,7 @@ export default function (
       const pedido = action.payload;
       return {
         ...state,
-        pedido: pedido,
+        pedido,
       };
     }
 
@@ -49,7 +49,7 @@ export default function (
       const pedido = action.payload;
       return {
         ...state,
-        pedido: pedido,
+        pedido,
       };
     }
 

@@ -29,7 +29,6 @@ export const GestionProductos: React.FC<GestionProductosProps> = ({
   useEffect(() => {
     listarProductos(0);
     if (!pedido || pedido.id === 0) {
-      console.log('@Entra a pedido');
       crearPedido({
         id: 0,
         numeroPedido: Date.now().toString(),
@@ -51,9 +50,7 @@ export const GestionProductos: React.FC<GestionProductosProps> = ({
           onClickAgregarProductoSolicitado={async (productoSolicitado) => {
             const pedidoString = sessionStorage.getItem('pedido') || '{}';
             const pedidoId = JSON.parse(pedidoString);
-            console.log('@pedidoId:', pedidoId);
-            console.log('@pedido:', pedido);            
-            await agregarProductoSolicitado(productoSolicitado, pedido.id);
+            agregarProductoSolicitado(productoSolicitado, pedido.id);
           }}
         />
         <PaginadorProductos
