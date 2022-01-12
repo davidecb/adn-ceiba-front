@@ -78,7 +78,6 @@
     "indent": 4
   },
   "jest": {
-    "testResultsProcessor": "jest-sonar-reporter",
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/serviceWorker.ts",
@@ -99,7 +98,8 @@
       "text",
       "text-summary",
       "html",
-      "xml"
+      "xml",
+      "info"
     ]
   }
 }
