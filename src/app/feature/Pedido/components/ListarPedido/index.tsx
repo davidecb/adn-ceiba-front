@@ -1,7 +1,7 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { FormularioContainer, PedidoContainer } from './styles';
 import { Pedido } from '../../models/Pedido';
+import { PedidoContainer } from './styles';
 import { TarjetaProductoSolicitado } from '../TarjetaProductoSolicitado';
 
 export interface ListarPedidoProps {
