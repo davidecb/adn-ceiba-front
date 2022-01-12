@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start --watchAll",
     "build": "CI=false && react-scripts build",
-    "test": "react-scripts test --watchAll=false",
+    "test": "react-scripts test --env=jsdom --testResultsProcessor ./node_modules/jest-sonar-reporter/index.js",
     "test:watch": "react-scripts test --watchAll",
     "cypress": "./node_modules/.bin/cypress open",
     "test:coverage": "react-scripts test --watchAll=false --coverage",
@@ -66,10 +66,17 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
     "eslint-plugin-react": "^7.18.3",
+    "jest-sonar-reporter": "^2.0.0",
     "node-sass": "^4.14.1",
     "redux-logger": "^3.0.6",
     "sinon": "^9.0.0",
     "typescript": "^3.9.5"
+  },
+  "jestSonar": {
+    "sonar56x": true,
+    "reportPath": "testResults",
+    "reportFile": "sonar-report.xml",
+    "indent": 4
   },
   "jest": {
     "collectCoverageFrom": [
