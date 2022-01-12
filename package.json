@@ -73,12 +73,12 @@
     "typescript": "^3.9.5"
   },
   "jestSonar": {
-    "sonar56x": true,
     "reportPath": "testResults",
     "reportFile": "sonar-report.xml",
     "indent": 4
   },
   "jest": {
+    "testResultsProcessor": "jest-sonar-reporter",
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/serviceWorker.ts",
