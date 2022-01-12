@@ -98,7 +98,8 @@
       "lcov",
       "text",
       "text-summary",
-      "html"
+      "html",
+      "xml"
     ]
   }
 }
