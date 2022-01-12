@@ -80,7 +80,7 @@ exports[`FormSolicitarProducto test should match snapshot 1`] = `
         <label
           class="sc-AxiKw jXpQYs"
         >
-          Pulido
+          Pulido 
           <input
             name="acabado"
             type="checkbox"
@@ -90,7 +90,7 @@ exports[`FormSolicitarProducto test should match snapshot 1`] = `
         <label
           class="sc-AxiKw jXpQYs"
         >
-          Pintado
+          Pintado 
           <input
             name="acabado"
             type="checkbox"
@@ -100,7 +100,7 @@ exports[`FormSolicitarProducto test should match snapshot 1`] = `
         <label
           class="sc-AxiKw jXpQYs"
         >
-          Barnizado
+          Barnizado 
           <input
             name="acabado"
             type="checkbox"
@@ -111,7 +111,7 @@ exports[`FormSolicitarProducto test should match snapshot 1`] = `
       <label
         class="sc-AxiKw jXpQYs"
       >
-        Urgencia:
+        Urgencia: 
         <input
           name="acabado"
           type="checkbox"

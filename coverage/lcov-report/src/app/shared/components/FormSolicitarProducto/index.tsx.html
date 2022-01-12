@@ -43,9 +43,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.5% </span>
+                <span class="strong">86.67% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/16</span>
+                <span class='fraction'>13/15</span>
             </div>
         
             
@@ -213,38 +213,7 @@
 <a name='L155'></a><a href='#L155'>155</a>
 <a name='L156'></a><a href='#L156'>156</a>
 <a name='L157'></a><a href='#L157'>157</a>
-<a name='L158'></a><a href='#L158'>158</a>
-<a name='L159'></a><a href='#L159'>159</a>
-<a name='L160'></a><a href='#L160'>160</a>
-<a name='L161'></a><a href='#L161'>161</a>
-<a name='L162'></a><a href='#L162'>162</a>
-<a name='L163'></a><a href='#L163'>163</a>
-<a name='L164'></a><a href='#L164'>164</a>
-<a name='L165'></a><a href='#L165'>165</a>
-<a name='L166'></a><a href='#L166'>166</a>
-<a name='L167'></a><a href='#L167'>167</a>
-<a name='L168'></a><a href='#L168'>168</a>
-<a name='L169'></a><a href='#L169'>169</a>
-<a name='L170'></a><a href='#L170'>170</a>
-<a name='L171'></a><a href='#L171'>171</a>
-<a name='L172'></a><a href='#L172'>172</a>
-<a name='L173'></a><a href='#L173'>173</a>
-<a name='L174'></a><a href='#L174'>174</a>
-<a name='L175'></a><a href='#L175'>175</a>
-<a name='L176'></a><a href='#L176'>176</a>
-<a name='L177'></a><a href='#L177'>177</a>
-<a name='L178'></a><a href='#L178'>178</a>
-<a name='L179'></a><a href='#L179'>179</a>
-<a name='L180'></a><a href='#L180'>180</a>
-<a name='L181'></a><a href='#L181'>181</a>
-<a name='L182'></a><a href='#L182'>182</a>
-<a name='L183'></a><a href='#L183'>183</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L158'></a><a href='#L158'>158</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -335,8 +304,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">30x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -348,23 +315,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -423,14 +373,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import * as Yup from 'yup';
-import {
-  Cancelar,
-  Form,
-  FormSolicitarProductoContainer,
-  Label,
-  OpcionesAcabado,
-  SpanError
-} from './styles';
+import { Cancelar, Form, FormSolicitarProductoContainer,
+        Label, OpcionesAcabado, SpanError } from './styles';
 import { Button } from 'app/shared/components/Button';
 import { FormikHelpers } from 'formik/dist/types';
 import { Producto } from 'app/feature/Producto/models/Producto';
@@ -503,8 +447,8 @@ export const FormSolicitarProducto: React.FC&lt;FormSolicitarProductoProps&gt; =
         barnizado: checkboxValues.barnizado
       },
       urgencia: checkboxValues.urgencia,
-      cantidad,
-      producto: producto.id
+      producto: producto.id,
+      cantidad
     });
     resetForm();
     cerrarFormulario();
@@ -516,9 +460,7 @@ export const FormSolicitarProducto: React.FC&lt;FormSolicitarProductoProps&gt; =
     onSubmit: handleSubmit,
   });
 &nbsp;
-  const handleCancelar = () =&gt; {
-    cerrarFormulario();
-  };
+  const handleCancelar = () =&gt; cerrarFormulario();
 &nbsp;
   const handleFormCheckbox =<span class="fstat-no" title="function not covered" >(e</span>: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {    
     const { checked, value } = <span class="cstat-no" title="statement not covered" >e.target;</span>
@@ -534,24 +476,13 @@ export const FormSolicitarProducto: React.FC&lt;FormSolicitarProductoProps&gt; =
       &lt;Cancelar onClick={handleCancelar}&gt;❌&lt;/Cancelar&gt;
       &lt;Form onSubmit={formik.handleSubmit}&gt;
         &lt;h2&gt;Personalizar {producto.nombre}&lt;/h2&gt;
-        &lt;Select
-          name="material"
-          placeholder="material"
-          value={formik.values.material}
-          onChange={formik.handleChange}&gt;
+        &lt;Select name="material" placeholder="material" value={formik.values.material} onChange={formik.handleChange}&gt;
             &lt;option value="" &gt;Material&lt;/option&gt;
             &lt;option value="PLA" &gt;PLA&lt;/option&gt;
             &lt;option value="ABS" &gt;ABS&lt;/option&gt;
         &lt;/Select&gt;
-        {formik.touched.material &amp;&amp; formik.errors.material &amp;&amp; (
-          &lt;SpanError&gt;{formik.errors.material}&lt;/SpanError&gt;
-        )}
-        &lt;Select
-          name="color"
-          placeholder="color"
-          value={formik.values.color}
-          onChange={formik.handleChange}
-        &gt;
+        {formik.touched.material &amp;&amp; formik.errors.material &amp;&amp; (&lt;SpanError&gt;{formik.errors.material}&lt;/SpanError&gt;)}
+        &lt;Select name="color" placeholder="color" value={formik.values.color} onChange={formik.handleChange}&gt;
           &lt;option value="" &gt;Color&lt;/option&gt;
           &lt;option value="negro" &gt;Negro&lt;/option&gt;
           &lt;option value="blanco" &gt;Blanco&lt;/option&gt;
@@ -559,27 +490,21 @@ export const FormSolicitarProducto: React.FC&lt;FormSolicitarProductoProps&gt; =
           &lt;option value="madera" &gt;Madera&lt;/option&gt;
           &lt;option value="plata" &gt;Plata&lt;/option&gt;
         &lt;/Select&gt;
-        {formik.touched.color &amp;&amp; formik.errors.color &amp;&amp; (
-          &lt;SpanError&gt;{formik.errors.color}&lt;/SpanError&gt;
-        )}
+        {formik.touched.color &amp;&amp; formik.errors.color &amp;&amp; (&lt;SpanError&gt;{formik.errors.color}&lt;/SpanError&gt;)}
         &lt;OpcionesAcabado&gt;
           Acabados:
           &lt;Label&gt;
-            Pulido
-            &lt;input type='checkbox' name='acabado' value='pulido' onChange={handleFormCheckbox} /&gt;
+            Pulido &lt;input type='checkbox' name='acabado' value='pulido' onChange={handleFormCheckbox} /&gt;
           &lt;/Label&gt;
           &lt;Label&gt;
-            Pintado
-            &lt;input type='checkbox' name='acabado' value='pintado' onChange={handleFormCheckbox} /&gt;
+            Pintado &lt;input type='checkbox' name='acabado' value='pintado' onChange={handleFormCheckbox} /&gt;
           &lt;/Label&gt;
           &lt;Label&gt;
-            Barnizado
-            &lt;input type='checkbox' name='acabado' value='barnizado' onChange={handleFormCheckbox} /&gt;
+            Barnizado &lt;input type='checkbox' name='acabado' value='barnizado' onChange={handleFormCheckbox} /&gt;
           &lt;/Label&gt;
         &lt;/OpcionesAcabado&gt;
         &lt;Label&gt;
-          Urgencia: 
-          &lt;input type='checkbox' name='acabado' value='urgencia' onChange={handleFormCheckbox} /&gt;
+          Urgencia: &lt;input type='checkbox' name='acabado' value='urgencia' onChange={handleFormCheckbox} /&gt;
         &lt;/Label&gt;
         &lt;SelectorCantidad setCantidad={setCantidad} cantidad={initialValues.cantidad} /&gt;             
         &lt;Button type="submit"&gt;Agregar al carrito&lt;/Button&gt;
@@ -609,7 +534,7 @@ FormSolicitarProducto.propTypes = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Jan 12 2022 12:03:41 GMT-0500 (Colombia Standard Time)
+                at Wed Jan 12 2022 14:49:34 GMT-0500 (Colombia Standard Time)
             </div>
         </div>
         <script src="..\..\..\..\..\prettify.js"></script>
